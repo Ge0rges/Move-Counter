@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Move C.</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.ge0rges.${PRODUCT_NAME:rfc1034identifier}</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2.3</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.2.3</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSLocationAlwaysUsageDescriptio</key>
+	<string>Move Counter uses location data to get the speed of the device when recording and looking for moves to improve accuracy. If allowed it will also display this information on a map.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Move Counter uses location data to get the speed of the device when recording and looking for moves to improve accuracy. If allowed it will also display this information on a map.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Move Counter uses location data to get the speed of the device when recording and looking for moves to improve accuracy. If allowed it will also display this information on a map.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Move Counter uses on board sensors such as the Accelerometer to detect phone movements to generate ID's for each move and then detect them later. The app cannot function without access to sensors.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+		<string>accelerometer</string>
+		<string>gyroscope</string>
+		<string>gps</string>
+		<string>location-services</string>
+	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+</dict>
+</plist>

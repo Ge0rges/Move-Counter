@@ -1,0 +1,24 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+//keys to retrieve data out of moves arrays
+#define HASHES_INDEX_IN_MOVES_ARRAY 0
+#define NAME_INDEX_IN_MOVES_ARRAY 1
+#define COUNT_INDEX_IN_MOVES_ARRAY 2
+#define WANTSMAPPING_INDEX_IN_MOVES_ARRAY 3
+#define ISDEFAULTIMAGE_INDEX_IN_MOVES_ARRAY 4//this shuld always be before last
+#define IMAGE_INDEX_IN_MOVES_ARRAY 5//this should always be last

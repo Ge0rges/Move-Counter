@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA12B05A1914BF0700F74FBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B0591914BF0700F74FBE /* Foundation.framework */; };
+		DA12B05C1914BF0700F74FBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B05B1914BF0700F74FBE /* CoreGraphics.framework */; };
+		DA12B05E1914BF0700F74FBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B05D1914BF0700F74FBE /* UIKit.framework */; };
+		DA12B0641914BF0700F74FBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA12B0621914BF0700F74FBE /* InfoPlist.strings */; };
+		DA12B0661914BF0700F74FBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA12B0651914BF0700F74FBE /* main.m */; };
+		DA12B06A1914BF0700F74FBE /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA12B0691914BF0700F74FBE /* SCAppDelegate.m */; };
+		DA12B06D1914BF0700F74FBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA12B06B1914BF0700F74FBE /* Main.storyboard */; };
+		DA12B0701914BF0700F74FBE /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA12B06F1914BF0700F74FBE /* SCViewController.m */; };
+		DA12B0721914BF0700F74FBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA12B0711914BF0700F74FBE /* Images.xcassets */; };
+		DA12B0791914BF0700F74FBE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B0781914BF0700F74FBE /* XCTest.framework */; };
+		DA12B07A1914BF0700F74FBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B0591914BF0700F74FBE /* Foundation.framework */; };
+		DA12B07B1914BF0700F74FBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B05D1914BF0700F74FBE /* UIKit.framework */; };
+		DA12B0831914BF0700F74FBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA12B0811914BF0700F74FBE /* InfoPlist.strings */; };
+		DA12B0851914BF0700F74FBE /* Move_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA12B0841914BF0700F74FBE /* Move_CounterTests.m */; };
+		DA12B08F1914C0C700F74FBE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B08E1914C0C700F74FBE /* CoreMotion.framework */; };
+		DA1861BB1925321A0073F2DD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1861BA1925321A0073F2DD /* MediaPlayer.framework */; };
+		DA3CE696191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CE695191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.m */; };
+		DA3D29F319391E7900EA3144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3D29F219391E7900EA3144 /* CoreLocation.framework */; };
+		DA3D29F9193AF88A00EA3144 /* SCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3D29F8193AF88A00EA3144 /* SCMapViewController.m */; };
+		DA3D29FB193AF8C300EA3144 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3D29FA193AF8C300EA3144 /* MapKit.framework */; };
+		DA4B734119367D5000E0638A /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4B733A19367D5000E0638A /* UIImage+Alpha.m */; };
+		DA4B734219367D5000E0638A /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4B733D19367D5000E0638A /* UIImage+Resize.m */; };
+		DA4B734319367D5000E0638A /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4B734019367D5000E0638A /* UIImage+RoundedCorner.m */; };
+		DA5FF8031A01FE6C001886BB /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FF7F81A01FE6C001886BB /* NSMutableArray+SWUtilityButtons.m */; };
+		DA5FF8041A01FE6C001886BB /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FF7FA1A01FE6C001886BB /* SWCellScrollView.m */; };
+		DA5FF8051A01FE6C001886BB /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FF7FC1A01FE6C001886BB /* SWLongPressGestureRecognizer.m */; };
+		DA5FF8061A01FE6C001886BB /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FF7FE1A01FE6C001886BB /* SWTableViewCell.m */; };
+		DA5FF8071A01FE6C001886BB /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FF8001A01FE6C001886BB /* SWUtilityButtonTapGestureRecognizer.m */; };
+		DA5FF8081A01FE6C001886BB /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5FF8021A01FE6C001886BB /* SWUtilityButtonView.m */; };
+		DA7FC49B193738DC00BDDBEA /* tutorial.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA7FC49A193738DC00BDDBEA /* tutorial.mp4 */; };
+		DAA75D1E1914DA4000031B37 /* SCMove.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA75D1D1914DA4000031B37 /* SCMove.m */; };
+		DAB673371932593500215F2E /* SCRedirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB673361932593500215F2E /* SCRedirectionViewController.m */; };
+		DAB6733A19325A9600215F2E /* SCTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB6733919325A9600215F2E /* SCTutorialViewController.m */; };
+		DAB6733F19361F3A00215F2E /* SCWinningPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB6733E19361F3A00215F2E /* SCWinningPageViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA12B07C1914BF0700F74FBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA12B04E1914BF0700F74FBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA12B0551914BF0700F74FBE;
+			remoteInfo = "Move Counter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA12B0561914BF0700F74FBE /* Move Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Move Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA12B0591914BF0700F74FBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA12B05B1914BF0700F74FBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA12B05D1914BF0700F74FBE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA12B0611914BF0700F74FBE /* Move Counter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Move Counter-Info.plist"; sourceTree = "<group>"; };
+		DA12B0631914BF0700F74FBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA12B0651914BF0700F74FBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA12B0671914BF0700F74FBE /* Move Counter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Move Counter-Prefix.pch"; sourceTree = "<group>"; };
+		DA12B0681914BF0700F74FBE /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		DA12B0691914BF0700F74FBE /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		DA12B06C1914BF0700F74FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA12B06E1914BF0700F74FBE /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		DA12B06F1914BF0700F74FBE /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		DA12B0711914BF0700F74FBE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA12B0771914BF0700F74FBE /* Move CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Move CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA12B0781914BF0700F74FBE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DA12B0801914BF0700F74FBE /* Move CounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Move CounterTests-Info.plist"; sourceTree = "<group>"; };
+		DA12B0821914BF0700F74FBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA12B0841914BF0700F74FBE /* Move_CounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Move_CounterTests.m; sourceTree = "<group>"; };
+		DA12B08E1914C0C700F74FBE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		DA1861BA1925321A0073F2DD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		DA3CE694191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFImagePickerControllerPlus.h; sourceTree = "<group>"; };
+		DA3CE695191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFImagePickerControllerPlus.m; sourceTree = "<group>"; };
+		DA3D29F219391E7900EA3144 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DA3D29F7193AF88A00EA3144 /* SCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMapViewController.h; sourceTree = "<group>"; };
+		DA3D29F8193AF88A00EA3144 /* SCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMapViewController.m; sourceTree = "<group>"; };
+		DA3D29FA193AF8C300EA3144 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DA4B733919367D5000E0638A /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		DA4B733A19367D5000E0638A /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		DA4B733C19367D5000E0638A /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		DA4B733D19367D5000E0638A /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		DA4B733F19367D5000E0638A /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		DA4B734019367D5000E0638A /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		DA5FF7F71A01FE6C001886BB /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		DA5FF7F81A01FE6C001886BB /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		DA5FF7F91A01FE6C001886BB /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		DA5FF7FA1A01FE6C001886BB /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		DA5FF7FB1A01FE6C001886BB /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		DA5FF7FC1A01FE6C001886BB /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		DA5FF7FD1A01FE6C001886BB /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		DA5FF7FE1A01FE6C001886BB /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		DA5FF7FF1A01FE6C001886BB /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		DA5FF8001A01FE6C001886BB /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		DA5FF8011A01FE6C001886BB /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		DA5FF8021A01FE6C001886BB /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		DA7FC49A193738DC00BDDBEA /* tutorial.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tutorial.mp4; sourceTree = "<group>"; };
+		DAA75D1C1914DA4000031B37 /* SCMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMove.h; sourceTree = "<group>"; };
+		DAA75D1D1914DA4000031B37 /* SCMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMove.m; sourceTree = "<group>"; };
+		DAB673351932593500215F2E /* SCRedirectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRedirectionViewController.h; sourceTree = "<group>"; };
+		DAB673361932593500215F2E /* SCRedirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRedirectionViewController.m; sourceTree = "<group>"; };
+		DAB6733819325A9600215F2E /* SCTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTutorialViewController.h; sourceTree = "<group>"; };
+		DAB6733919325A9600215F2E /* SCTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTutorialViewController.m; sourceTree = "<group>"; };
+		DAB6733B193438C400215F2E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DAB6733D19361F3A00215F2E /* SCWinningPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWinningPageViewController.h; sourceTree = "<group>"; };
+		DAB6733E19361F3A00215F2E /* SCWinningPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWinningPageViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA12B0531914BF0700F74FBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3D29FB193AF8C300EA3144 /* MapKit.framework in Frameworks */,
+				DA3D29F319391E7900EA3144 /* CoreLocation.framework in Frameworks */,
+				DA1861BB1925321A0073F2DD /* MediaPlayer.framework in Frameworks */,
+				DA12B08F1914C0C700F74FBE /* CoreMotion.framework in Frameworks */,
+				DA12B05C1914BF0700F74FBE /* CoreGraphics.framework in Frameworks */,
+				DA12B05E1914BF0700F74FBE /* UIKit.framework in Frameworks */,
+				DA12B05A1914BF0700F74FBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA12B0741914BF0700F74FBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA12B0791914BF0700F74FBE /* XCTest.framework in Frameworks */,
+				DA12B07B1914BF0700F74FBE /* UIKit.framework in Frameworks */,
+				DA12B07A1914BF0700F74FBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA12B04D1914BF0700F74FBE = {
+			isa = PBXGroup;
+			children = (
+				DA12B05F1914BF0700F74FBE /* Move Counter */,
+				DA12B07E1914BF0700F74FBE /* Move CounterTests */,
+				DA12B0581914BF0700F74FBE /* Frameworks */,
+				DA12B0571914BF0700F74FBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA12B0571914BF0700F74FBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA12B0561914BF0700F74FBE /* Move Counter.app */,
+				DA12B0771914BF0700F74FBE /* Move CounterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA12B0581914BF0700F74FBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA3D29FA193AF8C300EA3144 /* MapKit.framework */,
+				DA3D29F219391E7900EA3144 /* CoreLocation.framework */,
+				DAB6733B193438C400215F2E /* AudioToolbox.framework */,
+				DA1861BA1925321A0073F2DD /* MediaPlayer.framework */,
+				DA12B08E1914C0C700F74FBE /* CoreMotion.framework */,
+				DA12B0591914BF0700F74FBE /* Foundation.framework */,
+				DA12B05B1914BF0700F74FBE /* CoreGraphics.framework */,
+				DA12B05D1914BF0700F74FBE /* UIKit.framework */,
+				DA12B0781914BF0700F74FBE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA12B05F1914BF0700F74FBE /* Move Counter */ = {
+			isa = PBXGroup;
+			children = (
+				DA12B0681914BF0700F74FBE /* SCAppDelegate.h */,
+				DA12B0691914BF0700F74FBE /* SCAppDelegate.m */,
+				DA12B06B1914BF0700F74FBE /* Main.storyboard */,
+				DAB673351932593500215F2E /* SCRedirectionViewController.h */,
+				DAB673361932593500215F2E /* SCRedirectionViewController.m */,
+				DAB6733819325A9600215F2E /* SCTutorialViewController.h */,
+				DAB6733919325A9600215F2E /* SCTutorialViewController.m */,
+				DA12B06E1914BF0700F74FBE /* SCViewController.h */,
+				DA12B06F1914BF0700F74FBE /* SCViewController.m */,
+				DAB6733D19361F3A00215F2E /* SCWinningPageViewController.h */,
+				DAB6733E19361F3A00215F2E /* SCWinningPageViewController.m */,
+				DA3D29F7193AF88A00EA3144 /* SCMapViewController.h */,
+				DA3D29F8193AF88A00EA3144 /* SCMapViewController.m */,
+				DAA75D1C1914DA4000031B37 /* SCMove.h */,
+				DAA75D1D1914DA4000031B37 /* SCMove.m */,
+				DA12B0711914BF0700F74FBE /* Images.xcassets */,
+				DA12B0601914BF0700F74FBE /* Supporting Files */,
+			);
+			path = "Move Counter";
+			sourceTree = "<group>";
+		};
+		DA12B0601914BF0700F74FBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FC49A193738DC00BDDBEA /* tutorial.mp4 */,
+				DA5FF7F61A01FE6C001886BB /* SWTableViewCell */,
+				DA4B733719367D5000E0638A /* UIImage Extensions */,
+				DA3CE693191FE0BD00C1F8D7 /* WFImagePickerPlus */,
+				DA12B0611914BF0700F74FBE /* Move Counter-Info.plist */,
+				DA12B0621914BF0700F74FBE /* InfoPlist.strings */,
+				DA12B0651914BF0700F74FBE /* main.m */,
+				DA12B0671914BF0700F74FBE /* Move Counter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA12B07E1914BF0700F74FBE /* Move CounterTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA12B0841914BF0700F74FBE /* Move_CounterTests.m */,
+				DA12B07F1914BF0700F74FBE /* Supporting Files */,
+			);
+			path = "Move CounterTests";
+			sourceTree = "<group>";
+		};
+		DA12B07F1914BF0700F74FBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA12B0801914BF0700F74FBE /* Move CounterTests-Info.plist */,
+				DA12B0811914BF0700F74FBE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA3CE693191FE0BD00C1F8D7 /* WFImagePickerPlus */ = {
+			isa = PBXGroup;
+			children = (
+				DA3CE694191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.h */,
+				DA3CE695191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.m */,
+			);
+			path = WFImagePickerPlus;
+			sourceTree = "<group>";
+		};
+		DA4B733719367D5000E0638A /* UIImage Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA4B733819367D5000E0638A /* UIImage+Alpha */,
+				DA4B733B19367D5000E0638A /* UIImage+Resize */,
+				DA4B733E19367D5000E0638A /* UIImage+RoundedCorner */,
+			);
+			path = "UIImage Extensions";
+			sourceTree = "<group>";
+		};
+		DA4B733819367D5000E0638A /* UIImage+Alpha */ = {
+			isa = PBXGroup;
+			children = (
+				DA4B733919367D5000E0638A /* UIImage+Alpha.h */,
+				DA4B733A19367D5000E0638A /* UIImage+Alpha.m */,
+			);
+			path = "UIImage+Alpha";
+			sourceTree = "<group>";
+		};
+		DA4B733B19367D5000E0638A /* UIImage+Resize */ = {
+			isa = PBXGroup;
+			children = (
+				DA4B733C19367D5000E0638A /* UIImage+Resize.h */,
+				DA4B733D19367D5000E0638A /* UIImage+Resize.m */,
+			);
+			path = "UIImage+Resize";
+			sourceTree = "<group>";
+		};
+		DA4B733E19367D5000E0638A /* UIImage+RoundedCorner */ = {
+			isa = PBXGroup;
+			children = (
+				DA4B733F19367D5000E0638A /* UIImage+RoundedCorner.h */,
+				DA4B734019367D5000E0638A /* UIImage+RoundedCorner.m */,
+			);
+			path = "UIImage+RoundedCorner";
+			sourceTree = "<group>";
+		};
+		DA5FF7F61A01FE6C001886BB /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA5FF7F71A01FE6C001886BB /* NSMutableArray+SWUtilityButtons.h */,
+				DA5FF7F81A01FE6C001886BB /* NSMutableArray+SWUtilityButtons.m */,
+				DA5FF7F91A01FE6C001886BB /* SWCellScrollView.h */,
+				DA5FF7FA1A01FE6C001886BB /* SWCellScrollView.m */,
+				DA5FF7FB1A01FE6C001886BB /* SWLongPressGestureRecognizer.h */,
+				DA5FF7FC1A01FE6C001886BB /* SWLongPressGestureRecognizer.m */,
+				DA5FF7FD1A01FE6C001886BB /* SWTableViewCell.h */,
+				DA5FF7FE1A01FE6C001886BB /* SWTableViewCell.m */,
+				DA5FF7FF1A01FE6C001886BB /* SWUtilityButtonTapGestureRecognizer.h */,
+				DA5FF8001A01FE6C001886BB /* SWUtilityButtonTapGestureRecognizer.m */,
+				DA5FF8011A01FE6C001886BB /* SWUtilityButtonView.h */,
+				DA5FF8021A01FE6C001886BB /* SWUtilityButtonView.m */,
+			);
+			path = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA12B0551914BF0700F74FBE /* Move Counter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA12B0881914BF0700F74FBE /* Build configuration list for PBXNativeTarget "Move Counter" */;
+			buildPhases = (
+				DA12B0521914BF0700F74FBE /* Sources */,
+				DA12B0531914BF0700F74FBE /* Frameworks */,
+				DA12B0541914BF0700F74FBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Move Counter";
+			productName = "Move Counter";
+			productReference = DA12B0561914BF0700F74FBE /* Move Counter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA12B0761914BF0700F74FBE /* Move CounterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA12B08B1914BF0700F74FBE /* Build configuration list for PBXNativeTarget "Move CounterTests" */;
+			buildPhases = (
+				DA12B0731914BF0700F74FBE /* Sources */,
+				DA12B0741914BF0700F74FBE /* Frameworks */,
+				DA12B0751914BF0700F74FBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA12B07D1914BF0700F74FBE /* PBXTargetDependency */,
+			);
+			name = "Move CounterTests";
+			productName = "Move CounterTests";
+			productReference = DA12B0771914BF0700F74FBE /* Move CounterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA12B04E1914BF0700F74FBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Georges Kanaan";
+				TargetAttributes = {
+					DA12B0551914BF0700F74FBE = {
+						DevelopmentTeam = 7DTJP5N92F;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					DA12B0761914BF0700F74FBE = {
+						TestTargetID = DA12B0551914BF0700F74FBE;
+					};
+				};
+			};
+			buildConfigurationList = DA12B0511914BF0700F74FBE /* Build configuration list for PBXProject "Move Counter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA12B04D1914BF0700F74FBE;
+			productRefGroup = DA12B0571914BF0700F74FBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA12B0551914BF0700F74FBE /* Move Counter */,
+				DA12B0761914BF0700F74FBE /* Move CounterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA12B0541914BF0700F74FBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA12B0721914BF0700F74FBE /* Images.xcassets in Resources */,
+				DA12B0641914BF0700F74FBE /* InfoPlist.strings in Resources */,
+				DA12B06D1914BF0700F74FBE /* Main.storyboard in Resources */,
+				DA7FC49B193738DC00BDDBEA /* tutorial.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA12B0751914BF0700F74FBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA12B0831914BF0700F74FBE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA12B0521914BF0700F74FBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA75D1E1914DA4000031B37 /* SCMove.m in Sources */,
+				DA3CE696191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.m in Sources */,
+				DA4B734319367D5000E0638A /* UIImage+RoundedCorner.m in Sources */,
+				DAB6733A19325A9600215F2E /* SCTutorialViewController.m in Sources */,
+				DA3D29F9193AF88A00EA3144 /* SCMapViewController.m in Sources */,
+				DA5FF8041A01FE6C001886BB /* SWCellScrollView.m in Sources */,
+				DAB673371932593500215F2E /* SCRedirectionViewController.m in Sources */,
+				DA5FF8031A01FE6C001886BB /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				DA5FF8051A01FE6C001886BB /* SWLongPressGestureRecognizer.m in Sources */,
+				DA5FF8061A01FE6C001886BB /* SWTableViewCell.m in Sources */,
+				DA12B06A1914BF0700F74FBE /* SCAppDelegate.m in Sources */,
+				DA4B734119367D5000E0638A /* UIImage+Alpha.m in Sources */,
+				DA4B734219367D5000E0638A /* UIImage+Resize.m in Sources */,
+				DA5FF8081A01FE6C001886BB /* SWUtilityButtonView.m in Sources */,
+				DA12B0701914BF0700F74FBE /* SCViewController.m in Sources */,
+				DAB6733F19361F3A00215F2E /* SCWinningPageViewController.m in Sources */,
+				DA5FF8071A01FE6C001886BB /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
+				DA12B0661914BF0700F74FBE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA12B0731914BF0700F74FBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA12B0851914BF0700F74FBE /* Move_CounterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA12B07D1914BF0700F74FBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA12B0551914BF0700F74FBE /* Move Counter */;
+			targetProxy = DA12B07C1914BF0700F74FBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA12B0621914BF0700F74FBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA12B0631914BF0700F74FBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA12B06B1914BF0700F74FBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA12B06C1914BF0700F74FBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA12B0811914BF0700F74FBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA12B0821914BF0700F74FBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA12B0861914BF0700F74FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA12B0871914BF0700F74FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA12B0891914BF0700F74FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_STATIC_ANALYZER_MODE = shallow;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ilyas Kanaan (H457J2HWER)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ilyas Kanaan (H457J2HWER)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Move Counter/Move Counter-Prefix.pch";
+				INFOPLIST_FILE = "Move Counter/Move Counter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Move Counter";
+				PROVISIONING_PROFILE = "819d22fc-e2aa-4c03-8f4d-179197cc9c89";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA12B08A1914BF0700F74FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_STATIC_ANALYZER_MODE = shallow;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ilyas Kanaan (7DTJP5N92F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ilyas Kanaan (7DTJP5N92F)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Move Counter/Move Counter-Prefix.pch";
+				INFOPLIST_FILE = "Move Counter/Move Counter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Move Counter";
+				PROVISIONING_PROFILE = "e23410db-6651-4b38-9e59-14519358d24c";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DA12B08C1914BF0700F74FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Move Counter.app/Move Counter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Move Counter/Move Counter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Move CounterTests/Move CounterTests-Info.plist";
+				PRODUCT_NAME = "Move CounterTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DA12B08D1914BF0700F74FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Move Counter.app/Move Counter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Move Counter/Move Counter-Prefix.pch";
+				INFOPLIST_FILE = "Move CounterTests/Move CounterTests-Info.plist";
+				PRODUCT_NAME = "Move CounterTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA12B0511914BF0700F74FBE /* Build configuration list for PBXProject "Move Counter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA12B0861914BF0700F74FBE /* Debug */,
+				DA12B0871914BF0700F74FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA12B0881914BF0700F74FBE /* Build configuration list for PBXNativeTarget "Move Counter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA12B0891914BF0700F74FBE /* Debug */,
+				DA12B08A1914BF0700F74FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA12B08B1914BF0700F74FBE /* Build configuration list for PBXNativeTarget "Move CounterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA12B08C1914BF0700F74FBE /* Debug */,
+				DA12B08D1914BF0700F74FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA12B04E1914BF0700F74FBE /* Project object */;
+}
