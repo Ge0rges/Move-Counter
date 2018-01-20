@@ -10,21 +10,16 @@
 
 @implementation SCTutorialViewController
 
--(void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 #pragma mark - Tutorial
--(IBAction)playTutorial {
+- (IBAction)playTutorial {
     MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[[NSBundle mainBundle] URLForResource:@"tutorial" withExtension:@"mp4"]];
     player.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
     [player.moviePlayer prepareToPlay];
     [self presentMoviePlayerViewControllerAnimated:player];
     [player.moviePlayer play];
-    
 }
 
--(void)removeFile:(NSString *)fileName ofType:(NSString *)extension inDirectory:(NSString *)directory {
+- (void)removeFile:(NSString *)fileName ofType:(NSString *)extension inDirectory:(NSString *)directory {
     NSFileManager * fileManager = [NSFileManager defaultManager];
     NSError * error = nil;
     
@@ -34,7 +29,7 @@
 }
 
 
--(IBAction)startSetup:(id)sender {
+- (IBAction)startSetup:(id)sender {
 
     //present the main view silently and start the recording process
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -44,7 +39,7 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
--(void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
     //delete the tutorial video to save space
     [self removeFile:@"tutorial" ofType:@"mov" inDirectory:[[NSBundle mainBundle] bundlePath]];
     
@@ -52,10 +47,5 @@
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"tutorialSeenPage2"];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

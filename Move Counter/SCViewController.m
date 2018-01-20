@@ -17,8 +17,7 @@
 @synthesize recordMoveButton, imageSourceOptions;
 
 #pragma mark - UIView Delegate
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -160,7 +159,7 @@
                 if (activity.stationary == NO && activity.automotive == NO) {
                     __strong NSArray *localAccelerationXData = [NSArray arrayWithObjects:[NSNumber numberWithDouble:data.userAcceleration.x], nil];
                     __strong NSArray *localAccelerationYData = [NSArray arrayWithObjects:[NSNumber numberWithDouble:data.userAcceleration.y], nil];
-                    __strong NSArray *localAccelerationZData = [NSArray arrayWithObjects:[NSNumber numberWithDouble:data.userAcceleration.x], nil];
+                    __strong NSArray *localAccelerationZData = [NSArray arrayWithObjects:[NSNumber numberWithDouble:data.userAcceleration.z], nil];
                     
                     //save the inner  arrays
                     [accelerationXData addObject:localAccelerationXData];
@@ -176,7 +175,7 @@
             //make the inner arrays containing the userAcceleration
             __strong NSArray *localAccelerationXData = [NSArray arrayWithObjects:[NSNumber numberWithDouble:data.userAcceleration.x], nil];
             __strong NSArray *localAccelerationYData = [NSArray arrayWithObjects:[NSNumber numberWithDouble:data.userAcceleration.y], nil];
-            __strong NSArray *localAccelerationZData = [NSArray arrayWithObjects:[NSNumber numberWithDouble:data.userAcceleration.x], nil];
+            __strong NSArray *localAccelerationZData = [NSArray arrayWithObjects:[NSNumber numberWithDouble:data.userAcceleration.z], nil];
             
             //save the inner  arrays
             [accelerationXData addObject:localAccelerationXData];
@@ -187,7 +186,7 @@
     }
 }
 
--(void)stopRecordingMove {
+- (void)stopRecordingMove {
     //stop getting GPS data
     [self.locationManager stopUpdatingLocation];
     
@@ -205,15 +204,15 @@
 
 
 #pragma mark - UITableViewDataSource
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[SCMove allMoves] count];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SWTableViewCell *cell = (SWTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"MoveCell"];//check if the cell was already created
     
     //get the move
@@ -223,6 +222,7 @@
     if (![[move objectAtIndex:ISDEFAULTIMAGE_INDEX_IN_MOVES_ARRAY] boolValue]) {
         UIImage *moveImage = [move objectAtIndex:IMAGE_INDEX_IN_MOVES_ARRAY];
         [cell.imageView setImage:[moveImage resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(50, 50) interpolationQuality:kCGInterpolationHigh]];
+		
     } else {
         UIImage *image = [UIImage imageNamed:[move objectAtIndex:IMAGE_INDEX_IN_MOVES_ARRAY]];
         [cell.imageView setImage:image];
@@ -254,7 +254,7 @@
     return rightUtilityButtons;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (isTracking == YES) {//check if it was tracking and the user switched to this move directly
         //he was in a session finish it
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -302,7 +302,7 @@
     
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     //Stop the motion activity
     [self.motionActivityManager stopActivityUpdates];
     
@@ -377,7 +377,7 @@
 }
 
 #pragma mark - UIAlertViewDelegate
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView == renameAlertView && buttonIndex == 1) {
         //rename the move
         if ([alertView textFieldAtIndex:0].text.length != 0) {
@@ -460,13 +460,13 @@
 }
 
 #pragma mark - Editing Moves
--(IBAction)updateGoal:(id)sender {
+- (IBAction)updateGoal:(id)sender {
     UIStepper *goalStepper = (UIStepper *)sender;
     goal = goalStepper.value;
     [self.goalLabel setText:[NSString stringWithFormat:@"Goal: %i", goal]];
 }
 
--(void)showModifyActionSheetWithNumber:(int)number {
+- (void)showModifyActionSheetWithNumber:(int)number {
     //get the move for its name
     NSArray *move = [SCMove moveWithNumber:number];
     NSString *name = [move objectAtIndex:NAME_INDEX_IN_MOVES_ARRAY];
@@ -552,7 +552,7 @@
     }
 }
 
--(void)deleteMoveWithNumber:(int)number {
+- (void)deleteMoveWithNumber:(int)number {
     if ([self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:number-1 inSection:0]].isSelected) {
         [self tableView:self.tableView didDeselectRowAtIndexPath:[NSIndexPath indexPathForRow:number-1 inSection:0]];
     }
@@ -563,7 +563,7 @@
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
--(void)renameMoveWithNumber:(int)number {
+- (void)renameMoveWithNumber:(int)number {
     renameAlertView = [[UIAlertView alloc] initWithTitle:@"Rename Move to:" message:nil delegate:self cancelButtonTitle:@"Cancel"otherButtonTitles:@"Rename", nil];
     renameAlertView.tag = number;
     [renameAlertView textFieldAtIndex:0].placeholder = @"Please choose a name for your move";
@@ -572,7 +572,7 @@
 }
 
 
--(void)changeMappingForMoveWithNumber:(int)number {
+- (void)changeMappingForMoveWithNumber:(int)number {
     changeMapAlertView = [[UIAlertView alloc] initWithTitle:@"Mapping" message:@"Would you like us to track your location while you execute moves to see them on a map when finished? (Useful for walking, running...). Your location is shared with noone and not sent to any server." delegate:self cancelButtonTitle:nil otherButtonTitles:@"No", @"Yes", nil];
     changeMapAlertView.tag = number;
     [changeMapAlertView show];
@@ -580,7 +580,7 @@
 }
 
 #pragma mark - Detecting Moves
--(void)processMove {
+- (void)processMove {
     //sort the arrays from smallest to biggest
     NSArray *accelerationXDataSorted = [accelerationXData sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         if ([[obj1 objectAtIndex:0] doubleValue] > [[obj1 objectAtIndex:0] doubleValue])
@@ -653,7 +653,7 @@
     }
 }
 
--(void)startLookingForMove:(NSArray *)move {
+- (void)startLookingForMove:(NSArray *)move {
     if ([CMMotionActivityManager isActivityAvailable]) {//if we can get M7 data
         //start getting motion activity M7 data
         [motionActivityManager startActivityUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMMotionActivity *activity) {
@@ -717,15 +717,13 @@
                     //stop the loop
                     break;
                 }
-                
             }
         }];
     }
 }
 
--(void)countRoutine {
-    
-    NSTimeInterval interval = -[timerDate timeIntervalSinceNow]; // return value will be negative, so change sign
+- (void)countRoutine {
+        NSTimeInterval interval = -[timerDate timeIntervalSinceNow]; // return value will be negative, so change sign
     if(interval >= 0.5 && isTracking) {//check if there is 0.5 second difference since this block was called
         //update count and label
         count += 1;
@@ -742,8 +740,7 @@
 #pragma mark - JWImagePickerController
 #pragma mark JWImagePickerControllerPlusDelegate
 
--(void)imagePickerController:(WFImagePickerControllerPlus *)picker didFinishPickingImage:(UIImage *)image defaultImage:(BOOL)defaultImage imageName:(NSString *)defaultImageName
-{
+- (void)imagePickerController:(WFImagePickerControllerPlus *)picker didFinishPickingImage:(UIImage *)image defaultImage:(BOOL)defaultImage imageName:(NSString *)defaultImageName {
     if (isCreating) {
         //show a wait alert while we filter through the data
         UIAlertView *waitAlert = [[UIAlertView alloc] initWithTitle:@"Generating move..." message:@"Please wait while we generate the move for you." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
@@ -852,8 +849,7 @@
     
 }
 
-- (void)imagePickerControllerDidGoBack:(WFImagePickerControllerPlus *)picker
-{
+- (void)imagePickerControllerDidGoBack:(WFImagePickerControllerPlus *)picker {
     if (isCreating) {//if it is creating then show the options again
         [self.imageSourceOptions showInView:self.view];
     }
@@ -873,33 +869,28 @@
 }
 
 #pragma mark JWImagePickerControllerGalleryDataSource
-
-
--(UIImage *)imagePickerController:(WFImagePickerControllerPlus *)picker galleryImageAtIndex:(NSUInteger) index
-{
+- (UIImage *)imagePickerController:(WFImagePickerControllerPlus *)picker galleryImageAtIndex:(NSUInteger) index {
     return [UIImage imageNamed:[imageChoices objectAtIndex:index]];
 }
 
--(int)numberOfImagesInGalleryForImagePicker:(WFImagePickerControllerPlus *)picker
-{
+- (int)numberOfImagesInGalleryForImagePicker:(WFImagePickerControllerPlus *)picker {
     return (int)[imageChoices count];
 }
 
 #pragma mark - CoreLocation
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)lclLocations {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)lclLocations {
     // If it's a relatively recent event, turn off updates to save power.
     CLLocation *location = [lclLocations lastObject];
     NSDate *eventDate = location.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    if (abs(howRecent) < 15.0 && location.horizontalAccuracy <= 10) {
+	if (fabs(howRecent) < 15.0 && location.horizontalAccuracy <= 10) {
         // If the event is recent and the accuracy is acceptable do something with it.
         [locations addObject:location];
     }
 }
 
 #pragma mark -
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

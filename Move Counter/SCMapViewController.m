@@ -12,10 +12,6 @@
 
 @synthesize map;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 - (BOOL)prefersStatusBarHidden {
     return YES;//hide the status bar
 }
@@ -47,14 +43,14 @@
     return polylineView;
 }
 
--(void)zoomToPolyLine:(MKMapView*)lclmap polyLine:(MKPolyline*)polyLine animated:(BOOL)animated {
+- (void)zoomToPolyLine:(MKMapView*)lclmap polyLine:(MKPolyline*)polyLine animated:(BOOL)animated {
     //zoom the map to fit the polyline
     MKPolygon *polygon = [MKPolygon polygonWithPoints:polyLine.points count:polyLine.pointCount];
     
     [lclmap setRegion:MKCoordinateRegionForMapRect([polygon boundingMapRect]) animated:animated];
 }
 
--(IBAction)changeMapType:(UISegmentedControl *)sender {
+- (IBAction)changeMapType:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {
         map.mapType = MKMapTypeStandard;
     } else if (sender.selectedSegmentIndex == 1) {
@@ -64,7 +60,7 @@
     }
 }
 
--(IBAction)showUserLocation:(id)sender {
+- (IBAction)showUserLocation:(id)sender {
     //zoom in on the user
     map.showsUserLocation = YES;//show the user
     [map setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
@@ -73,13 +69,8 @@
     });
 }
 
--(IBAction)back:(id)sender {
+- (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

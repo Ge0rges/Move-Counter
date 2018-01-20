@@ -10,7 +10,7 @@
 
 @implementation SCMove
 
-+(BOOL)createMoveWithHashs:(NSArray *)hashes count:(int)count image:(UIImage *)image defaultImage:(BOOL)defaultImage imageName:(NSString *)imageName wantsMapping:(BOOL)wantsMap andName:(NSString *)name {
++ (BOOL)createMoveWithHashs:(NSArray *)hashes count:(int)count image:(UIImage *)image defaultImage:(BOOL)defaultImage imageName:(NSString *)imageName wantsMapping:(BOOL)wantsMap andName:(NSString *)name {
     //get the number of moves
     int moveNumber = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"numberOfMoves"] + 1;
     
@@ -51,7 +51,7 @@
 }
 
 #pragma mark - Retrieving Moves
-+(NSArray *)moveWithNumber:(int)number {
++ (NSArray *)moveWithNumber:(int)number {
     //create the key string with the number passed to us
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -68,7 +68,7 @@
     return move;
 }
 
-+(NSMutableArray *)allMoves {
++ (NSMutableArray *)allMoves {
     NSMutableArray *allMoves = [NSMutableArray new];
     
     int numberOfMoves = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"numberOfMoves"];
@@ -82,7 +82,7 @@
 
 #pragma mark - Deleting Moves Data
 
-+(void)removeMoveNumber:(int)number {
++ (void)removeMoveNumber:(int)number {
     //clear the key
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -118,7 +118,7 @@
 }
 
 #pragma mark - Modifying Moves
-+(void)renameMoveWithNumber:(int)number andName:(NSString *)name{
++ (void)renameMoveWithNumber:(int)number andName:(NSString *)name{
     NSArray *move = [SCMove moveWithNumber:number];//get the move
     
     //create a mutable array from the move
@@ -143,7 +143,7 @@
 }
 
 #pragma mark Set Moves Properties
-+(void)setWantsMapping:(BOOL)wantsMap forMoveWithNumber:(int)number {
++ (void)setWantsMapping:(BOOL)wantsMap forMoveWithNumber:(int)number {
     NSArray *move = [SCMove moveWithNumber:number];//get the move
     //create a mutable array from the move
     NSMutableArray *mutableMove = [[NSMutableArray alloc] initWithArray:move copyItems:YES];
@@ -166,7 +166,7 @@
     [mutableMove writeToFile:filePath atomically:YES];
 }
 
-+(BOOL)setCount:(int)count forMoveWithNumber:(int)number {
++ (BOOL)setCount:(int)count forMoveWithNumber:(int)number {
     NSArray *move = [SCMove moveWithNumber:number];//get the move
     //create a mutable array from the move
     NSMutableArray *mutableMove = [[NSMutableArray alloc] initWithArray:move copyItems:YES];
@@ -190,7 +190,7 @@
     return savedMove;
 }
 
-+(void)setImage:(UIImage *)image forMoveWithNumber:(int)number defaultImage:(BOOL)defaultImage imageName:(NSString *)defaultImageName {
++ (void)setImage:(UIImage *)image forMoveWithNumber:(int)number defaultImage:(BOOL)defaultImage imageName:(NSString *)defaultImageName {
     
     //save image only if it isn't a default iamge so we don't have to resize it later
     if (!defaultImage) {
@@ -205,7 +205,7 @@
     }
 }
 
-+(void)setMoveWithNumber:(int)number hasDefaultImage:(BOOL)defaultImage imageName:(NSString *)imageName {
++ (void)setMoveWithNumber:(int)number hasDefaultImage:(BOOL)defaultImage imageName:(NSString *)imageName {
     NSArray *move = [SCMove moveWithNumber:number];//get the move
     if (defaultImage) {
         //create a mutable array from the move
@@ -249,7 +249,7 @@
     }
 }
 
-+(UIImage *)loadImageForMoveNumber:(int)number {
++ (UIImage *)loadImageForMoveNumber:(int)number {
     
     //load image
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

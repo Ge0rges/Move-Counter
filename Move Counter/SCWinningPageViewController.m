@@ -10,8 +10,7 @@
 
 @implementation SCWinningPageViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     //set wether we should hide the map button depedning on if we have locations and if mapping enabled
     if (![[_move objectAtIndex:WANTSMAPPING_INDEX_IN_MOVES_ARRAY] boolValue] || self.locations.count == 0) {
@@ -38,6 +37,7 @@
         } else if (_count <= 40) {
             [self.encouragementLabel setText:@"You're awesome!"];
         }
+		
     } else if (_count == _goal) {
         [self.encouragementLabel setText:[NSString stringWithFormat:@"You reached your goal of %i! You'll be fit in no time.", _goal]];
     } else if (_count > _goal) {
@@ -46,7 +46,7 @@
     
 }
 
--(IBAction)showMap:(id)sender {
+- (IBAction)showMap:(id)sender {
     //show the winning page
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     SCMapViewController *mvc = [storyboard instantiateViewControllerWithIdentifier:@"mapVC"];
@@ -58,7 +58,7 @@
 
 }
 
--(IBAction)showShareSheet:(id)sender {
+- (IBAction)showShareSheet:(id)sender {
     //set the activity view controll options
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:[NSArray arrayWithObjects:[NSString stringWithFormat:@"I did %@ %i times today! All tracked with Sports Counter.", [self.move objectAtIndex:NAME_INDEX_IN_MOVES_ARRAY ], self.count], nil] applicationActivities:nil];
     
@@ -71,14 +71,8 @@
     
 }
 
--(IBAction)closePage:(id)sender {
+- (IBAction)closePage:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

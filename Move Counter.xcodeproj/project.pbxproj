@@ -19,8 +19,6 @@
 		DA12B0791914BF0700F74FBE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B0781914BF0700F74FBE /* XCTest.framework */; };
 		DA12B07A1914BF0700F74FBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B0591914BF0700F74FBE /* Foundation.framework */; };
 		DA12B07B1914BF0700F74FBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B05D1914BF0700F74FBE /* UIKit.framework */; };
-		DA12B0831914BF0700F74FBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA12B0811914BF0700F74FBE /* InfoPlist.strings */; };
-		DA12B0851914BF0700F74FBE /* Move_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA12B0841914BF0700F74FBE /* Move_CounterTests.m */; };
 		DA12B08F1914C0C700F74FBE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA12B08E1914C0C700F74FBE /* CoreMotion.framework */; };
 		DA1861BB1925321A0073F2DD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1861BA1925321A0073F2DD /* MediaPlayer.framework */; };
 		DA3CE696191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CE695191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.m */; };
@@ -70,9 +68,6 @@
 		DA12B0711914BF0700F74FBE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA12B0771914BF0700F74FBE /* Move CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Move CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA12B0781914BF0700F74FBE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DA12B0801914BF0700F74FBE /* Move CounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Move CounterTests-Info.plist"; sourceTree = "<group>"; };
-		DA12B0821914BF0700F74FBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DA12B0841914BF0700F74FBE /* Move_CounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Move_CounterTests.m; sourceTree = "<group>"; };
 		DA12B08E1914C0C700F74FBE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		DA1861BA1925321A0073F2DD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		DA3CE694191FE0BD00C1F8D7 /* WFImagePickerControllerPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFImagePickerControllerPlus.h; sourceTree = "<group>"; };
@@ -143,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				DA12B05F1914BF0700F74FBE /* Move Counter */,
-				DA12B07E1914BF0700F74FBE /* Move CounterTests */,
 				DA12B0581914BF0700F74FBE /* Frameworks */,
 				DA12B0571914BF0700F74FBE /* Products */,
 			);
@@ -209,24 +203,6 @@
 				DA12B0621914BF0700F74FBE /* InfoPlist.strings */,
 				DA12B0651914BF0700F74FBE /* main.m */,
 				DA12B0671914BF0700F74FBE /* Move Counter-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DA12B07E1914BF0700F74FBE /* Move CounterTests */ = {
-			isa = PBXGroup;
-			children = (
-				DA12B0841914BF0700F74FBE /* Move_CounterTests.m */,
-				DA12B07F1914BF0700F74FBE /* Supporting Files */,
-			);
-			path = "Move CounterTests";
-			sourceTree = "<group>";
-		};
-		DA12B07F1914BF0700F74FBE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DA12B0801914BF0700F74FBE /* Move CounterTests-Info.plist */,
-				DA12B0811914BF0700F74FBE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -345,7 +321,8 @@
 				ORGANIZATIONNAME = "Georges Kanaan";
 				TargetAttributes = {
 					DA12B0551914BF0700F74FBE = {
-						DevelopmentTeam = 7DTJP5N92F;
+						DevelopmentTeam = 6ML87535CH;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -392,7 +369,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA12B0831914BF0700F74FBE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +404,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA12B0851914BF0700F74FBE /* Move_CounterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,14 +432,6 @@
 				DA12B06C1914BF0700F74FBE /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DA12B0811914BF0700F74FBE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA12B0821914BF0700F74FBE /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -547,14 +514,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_STATIC_ANALYZER_MODE = shallow;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ilyas Kanaan (H457J2HWER)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ilyas Kanaan (H457J2HWER)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ML87535CH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Move Counter/Move Counter-Prefix.pch";
 				INFOPLIST_FILE = "Move Counter/Move Counter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ge0rges.MoveCounter;
 				PRODUCT_NAME = "Move Counter";
-				PROVISIONING_PROFILE = "819d22fc-e2aa-4c03-8f4d-179197cc9c89";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -568,14 +539,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_STATIC_ANALYZER_MODE = shallow;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ilyas Kanaan (7DTJP5N92F)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ilyas Kanaan (7DTJP5N92F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ML87535CH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Move Counter/Move Counter-Prefix.pch";
 				INFOPLIST_FILE = "Move Counter/Move Counter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ge0rges.MoveCounter;
 				PRODUCT_NAME = "Move Counter";
-				PROVISIONING_PROFILE = "e23410db-6651-4b38-9e59-14519358d24c";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;

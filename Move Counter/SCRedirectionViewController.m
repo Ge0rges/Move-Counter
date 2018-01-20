@@ -10,15 +10,11 @@
 
 @implementation SCRedirectionViewController
 
--(void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (BOOL)prefersStatusBarHidden {
+-  (BOOL)prefersStatusBarHidden {
     return YES;//hide the status bar
 }
 
--(void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     //get the stroyboard top present he views
@@ -37,12 +33,6 @@
         
         [self presentViewController:vc animated:YES completion:nil];
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
